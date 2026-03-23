@@ -1,0 +1,249 @@
+/* --- KEEP ALL YOUR ORIGINAL CODE ABOVE THIS UNCHANGED --- */
+
+:root {
+    --bg-color: #fff0f5; 
+    --text-color: #5c4033; 
+    --primary-color: #ffb6c1;
+    --secondary-color: #b0e0e6; 
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --font-main: 'Nunito', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: 
+        linear-gradient(rgba(167, 158, 161, 0.85), rgba(201, 186, 191, 0.85)), 
+        url('https://images6.alphacoders.com/135/thumb-1920-1354313.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+nav {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 20px; 
+    z-index: 100;
+    margin: 20px 20%; 
+    border-radius: 50px; 
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+    border: 3px dashed var(--primary-color);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 80px 2rem;
+    margin: 0 20%; 
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 0px #fff;
+    margin-bottom: 40px;
+}
+
+#home {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-face {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite ease-in-out;
+    user-select: none;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 900;
+    margin-top: 20px;
+    box-shadow: 0 6px 0 #ff8da1, 0 15px 20px rgba(255, 182, 193, 0.4);
+    transition: all 0.1s ease;
+}
+
+.btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #ff8da1, 0 5px 10px rgba(255, 182, 193, 0.4);
+}
+
+.skills-grid, .projects-grid, .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+    border: 3px solid var(--secondary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+    border-color: var(--primary-color);
+}
+
+#contact {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
+    border: 3px dashed var(--primary-color);
+    margin: 20px 20%;
+    text-align: left; 
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--secondary-color);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border: 3px dashed var(--primary-color);
+    margin: 20px 20% 40px 20%; 
+    border-radius: 30px;
+}
+
+/* CUSTOM CURSOR LOGIC (Default PC) */
+body, a, button, input, textarea, .cat-face, .logo {
+    cursor: none !important; 
+}
+
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, font-size 0.15s ease-out;
+    text-shadow: 0 2px 5px rgba(255, 182, 193, 0.6);
+}
+/* Ensure university and email links are pink */
+.card a, #contact a {
+    text-decoration: none;
+    color: #ff69b4; /* Cute pink accent */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card a:hover, #contact a:hover {
+    color: #ff1493; /* Darker pink on hover */
+}
+
+/* Specific fix for the education grid links if needed */
+.education-grid .card a {
+    color: #ff69b4;
+}
+/* --- UPDATED OPTIMIZATION SECTION --- */
+
+@media (max-width: 768px) {
+    /* Restore standard cursor for touchscreens so users can see where they tap */
+    body, a, button, input, textarea, .cat-face, .logo {
+        cursor: auto !important;
+    }
+    #custom-cursor {
+        display: none !important;
+    }
+
+    /* Reduce large PC margins so content fits on narrow phone screens */
+    nav, section, footer, #contact {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+    }
+
+    /* Instead of hiding links, we stack them or shrink them to fit */
+    nav {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust oversized text for small screens */
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .cat-face {
+        font-size: 4rem;
+    }
+}
