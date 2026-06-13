@@ -85,6 +85,33 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+.sparkles {
+    display: inline-flex;
+    align-items: flex-start;
+    margin-left: 6px;
+}
+
+.sparkle {
+    fill: #ffd54f;
+    animation: twinkle 2s infinite;
+}
+
+.big {
+    width: 20px;
+    height: 20px;
+}
+
+.small {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-top: -4px;
+}
+
+@keyframes twinkle {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
 
 .cat-face {
     font-size: 6rem;
