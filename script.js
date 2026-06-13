@@ -1,4 +1,3 @@
-
 const catFace = document.getElementById('interactive-cat');
 const catExpressions = ['😺', '😸', '😻', '😼', '😽', '🙀'];
 

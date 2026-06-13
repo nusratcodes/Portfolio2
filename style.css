@@ -1,5 +1,3 @@
-/* --- KEEP ALL YOUR ORIGINAL CODE ABOVE THIS UNCHANGED --- */
-
 :root {
     --bg-color: #fff0f5; 
     --text-color: #5c4033; 
@@ -170,7 +168,6 @@ footer {
     border-radius: 30px;
 }
 
-/* CUSTOM CURSOR LOGIC (Default PC) */
 body, a, button, input, textarea, .cat-face, .logo {
     cursor: none !important; 
 }
@@ -186,26 +183,25 @@ body, a, button, input, textarea, .cat-face, .logo {
     transition: transform 0.15s ease-out, font-size 0.15s ease-out;
     text-shadow: 0 2px 5px rgba(255, 182, 193, 0.6);
 }
-/* Ensure university and email links are pink */
 .card a, #contact a {
     text-decoration: none;
-    color: #ff69b4; /* Cute pink accent */
+    color: #ff69b4; 
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .card a:hover, #contact a:hover {
-    color: #ff1493; /* Darker pink on hover */
+    color: #ff1493; 
 }
 
-/* Specific fix for the education grid links if needed */
+
 .education-grid .card a {
     color: #ff69b4;
 }
-/* --- UPDATED OPTIMIZATION SECTION --- */
+
 
 @media (max-width: 768px) {
-    /* Restore standard cursor for touchscreens so users can see where they tap */
+   
     body, a, button, input, textarea, .cat-face, .logo {
         cursor: auto !important;
     }
@@ -213,13 +209,13 @@ body, a, button, input, textarea, .cat-face, .logo {
         display: none !important;
     }
 
-    /* Reduce large PC margins so content fits on narrow phone screens */
+    
     nav, section, footer, #contact {
         margin-left: 5% !important;
         margin-right: 5% !important;
     }
 
-    /* Instead of hiding links, we stack them or shrink them to fit */
+ 
     nav {
         flex-direction: column;
         border-radius: 20px;
@@ -238,7 +234,7 @@ body, a, button, input, textarea, .cat-face, .logo {
         font-size: 0.9rem;
     }
 
-    /* Adjust oversized text for small screens */
+
     h2 {
         font-size: 1.8rem;
     }
